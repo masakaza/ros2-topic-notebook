@@ -15,20 +15,19 @@ ros2_ws/
 ```bash
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
-source /opt/ros/humble/setup.bash
+colcon build
 ```
 
 ## 从零创建 C++ 包
 
 ```bash
-ros2 pkg create --build-type ament_cmake --license MIT topic_demo_cpp --dependencies rclcpp std_msgs
+ros2 pkg create --build-type ament_cmake topic_demo_cpp --dependencies rclcpp std_msgs
 ```
 
 参数含义：
 
 - `ros2 pkg create`：创建功能包。
 - `--build-type ament_cmake`：使用 ROS 2 的 CMake 构建体系。
-- `--license MIT`：设置许可证标识。
 - `topic_demo_cpp`：包名。
 - `--dependencies rclcpp std_msgs`：声明本例依赖的 ROS 2 C++ 客户端库和标准消息包。
 
