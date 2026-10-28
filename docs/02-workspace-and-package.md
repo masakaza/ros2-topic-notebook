@@ -21,7 +21,7 @@ colcon build
 ## 从零创建 C++ 包
 
 ```bash
-ros2 pkg create --build-type ament_cmake topic_demo_cpp --dependencies rclcpp std_msgs
+ros2 pkg create --build-type ament_cmake topic_demo_cpp --dependencies rclcpp std_msgs --node-name 程序名字
 ```
 
 参数含义：
@@ -30,6 +30,7 @@ ros2 pkg create --build-type ament_cmake topic_demo_cpp --dependencies rclcpp st
 - `--build-type ament_cmake`：使用 ROS 2 的 CMake 构建体系。
 - `topic_demo_cpp`：包名。
 - `--dependencies rclcpp std_msgs`：声明本例依赖的 ROS 2 C++ 客户端库和标准消息包。
+- - `--node-name 程序名字`：在该功能包底下创建一个 程序名字 源码文件。
 
 本仓库已经提供完整功能包，通常直接复制 `src/topic_demo_cpp` 即可，不必重复创建。
 
