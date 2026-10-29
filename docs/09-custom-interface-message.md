@@ -61,11 +61,9 @@ package.xml 需要声明接口生成器、运行时依赖和接口包组：
 将示例中的 topic_demo_interfaces 和 topic_demo_cpp 两个包复制到工作空间的 src/，然后：
 
 ```bash
-source /opt/ros/humble/setup.bash
 cd ~/ros2_custom_ws
-rosdep install --from-paths src --ignore-src -r -y --rosdistro humble
-colcon build --symlink-install
-source install/setup.bash
+colcon build --packages-select topic_demo_interfaces
+. install/setup.bash
 ros2 interface show topic_demo_interfaces/msg/Student
 ```
 
